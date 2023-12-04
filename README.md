@@ -11,3 +11,4 @@ Yuanjing's update on Dec 3:
   <img width="850" alt="image" src="https://github.com/nick-carroll1/LLM-Recommender-System/assets/110933007/6d544af4-77e4-4b11-a3b6-abbc9b59a322">
 
 3. Tested first 100 users with $m=10$, $n_s=20$. Average hit rate is 0.509
+4. ```baseline_rec.ipynb```: recommend top 10 most popular (watched by most users) movies to every user -- hit rate: 0.5156945917285259
