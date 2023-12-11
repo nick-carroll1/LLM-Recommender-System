@@ -6,6 +6,7 @@ This repository uses ChatGPT to create a movie recommender system and compares t
 This project aims to build a movie recommendation system by leveraging the OpenAI API, integrating Large Language Models (LLM) to enhance the recommendation accuracy through innovative prompt engineering. We specifically focus on the application of four distinct prompt templates to evaluate the performance of movie recommendations. By conducting a comparative analysis of these templates, we aim to identify the most effective approach for generating personalized movie recommendations.
 
 ## Methodology
+![image](https://github.com/nick-carroll1/LLM-Recommender-System/assets/110933007/73024e3a-4c72-450c-8e4f-daade755fa08)
 
 ### Data
 In this project, we use the MovieLens 100K dataset. Collected by the GroupLens Research Project at the University of Minnesota[1]. MoiveLens 100K is a widely-used benchmark dataset in the field of recommender systems. Released in April 1998, it comprises 100,000 movie ratings, ranging from 1 to 5, provided by 943 users on 1,682 movies. Each user has rated at least 20 movies, ensuring a reasonable level of engagement and data density for analysis.
