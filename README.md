@@ -1,4 +1,4 @@
-# LLM-Recommender-System
+# LLM Recommender System
 This repository uses ChatGPT to create a movie recommender system and compares the recommender's performance across four prompt templates.
 
 To run the code in this repository using ChatGPT, first pip install -r requirements.txt, then get an Open AI API Key and include it in a python file called key.py.  The file only needs one line stating:
