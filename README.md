@@ -78,4 +78,4 @@ The comparative performance for the prompts is shown in the below table:
 |         min   | 0.000000    % | 30.000000  % | 0.000000      % | 0.000000   % | 20.000000 % |
 |         max   | 20.000000   % | 100.000000 % | 100.000000    % | 100.000000 % | 100.00000 % |
 
-Note: candidate sets are selected from top rated movies by similar users; similar users are selected by cosine similarity of a vector of a user's ratings.
+Note: candidate sets are selected from top rated movies by similar users; similar users are selected by cosine similarity of a vector of a user's ratings; hit rate is the proportion of recommended movies that the user watched.
