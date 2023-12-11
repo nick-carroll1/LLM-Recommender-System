@@ -6,7 +6,7 @@ OPENAI_API_KEY = "YOUR_KEY_HERE".  This will allow all of the other files to imp
 
 To run all four prompts and compare performance click "Run All" on the comparing_prompts.ipynb Jupyter Notebook.
 
-The recommender's performance was compared using the MovieLens 100k dataset from the below paper.  It can be found at here: https://grouplens.org/datasets/movielens/
+The recommender's performance was compared using the MovieLens 100k dataset from the below paper.  It can be found here: https://grouplens.org/datasets/movielens/
 
 F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets:
 History and Context. ACM Transactions on Interactive Intelligent
