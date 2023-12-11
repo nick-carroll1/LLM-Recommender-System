@@ -4,6 +4,8 @@ This repository uses ChatGPT to create a movie recommender system and compares t
 To run the code in this repository using ChatGPT, first pip install -r requirements.txt, then get an Open AI API Key and include it in a python file called key.py.  The file only needs one line stating:
 OPENAI_API_KEY = "YOUR_KEY_HERE".  This will allow all of the other files to import your API key.
 
+To run all four prompts and compare performance click "Run All" on the comparing_prompts.ipynb Jupyter Notebook.
+
 The recommender's performance was compared using the MovieLens 100k dataset from the below paper.  It can be found at here: https://grouplens.org/datasets/movielens/
 
 F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets:
