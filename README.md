@@ -77,3 +77,5 @@ The comparative performance for the prompts is shown in the below table:
 |         std   | 5.501196    % | 17.947291  % | 31.601965     % | 26.437613  % | 20.900768 % |
 |         min   | 0.000000    % | 30.000000  % | 0.000000      % | 0.000000   % | 20.000000 % |
 |         max   | 20.000000   % | 100.000000 % | 100.000000    % | 100.000000 % | 100.00000 % |
+
+Note: candidate sets are selected from top rated movies by similar users; similar users are selected by cosine similarity of a vector of a user's ratings.
