@@ -1,5 +1,5 @@
 # LLM Recommender System
-This repository uses ChatGPT to create a movie recommender system and compares the recommender's performance across four prompt templates.
+This repository uses Large Language Model (LLM) to create a movie recommender system and compares the recommender's performance across four prompt templates.
 
 ## Project Overview
 
@@ -9,11 +9,9 @@ This project aims to build a movie recommendation system by leveraging the OpenA
 ![image](https://github.com/nick-carroll1/LLM-Recommender-System/assets/110933007/73024e3a-4c72-450c-8e4f-daade755fa08)
 
 ### Data
-In this project, we use the MovieLens 100K dataset. Collected by the GroupLens Research Project at the University of Minnesota[1]. MoiveLens 100K is a widely-used benchmark dataset in the field of recommender systems. Released in April 1998, it comprises 100,000 movie ratings, ranging from 1 to 5, provided by 943 users on 1,682 movies. Each user has rated at least 20 movies, ensuring a reasonable level of engagement and data density for analysis.
+In this project, we use the MovieLens 100K dataset. Collected by the GroupLens Research Project at the University of Minnesota[1]. MoiveLens 100K is a widely-used benchmark dataset in the field of recommender systems. Released in April 1998, it comprises 100,000 movie ratings, ranging from 1 to 5, provided by 943 users on 1,682 movies. Each user has rated at least 20 movies, ensuring a reasonable level of engagement and data density for analysis. The dataset can be found here: https://grouplens.org/datasets/movielens/
 
-The dataset can be found here: https://grouplens.org/datasets/movielens/
-
-The original dataset was provided in MATLAB format. We converted it using the [```src/prepare_data.ipynb```](https://github.com/nick-carroll1/LLM-Recommender-System/blob/main/src/prepare_data.ipynb) notebook and stored the processed data in ```processed_movie100k.csv``` for subsequent use. We also implemented a 70/30 train-test split to facilitate model training and evaluation. For prompt engineering, we enriched the dataset by appending a one-sentence summary from Wikipedia to each movie to provide additional context. These movie summaries, along with their corresponding titles, are compiled in ```movie_wiki.csv```.
+The original dataset was provided in MATLAB format. We converted it using the [```src/prepare_data.ipynb```](https://github.com/nick-carroll1/LLM-Recommender-System/blob/main/src/prepare_data.ipynb) notebook and stored the processed data in ```processed_movie100k.csv``` for subsequent use. We also implemented a 70/30 [train-test split](https://github.com/nick-carroll1/LLM-Recommender-System/blob/main/src/test_train_split.ipynb) to facilitate model training and evaluation. For prompt engineering, we enriched the dataset by appending a one-sentence summary from Wikipedia to each movie to provide additional context. These movie summaries, along with their corresponding titles, are compiled in ```movie_wiki.csv```.
 
 ### Prompt Engineering
 
@@ -96,6 +94,12 @@ Here are the comparative performance for the prompts:
 |         mean  | 4.0357      % | 76.5172    % | 68.9755       % | 71.9439    % | 67.7444   % |
 |         std   | 7.0931      % | 21.6064    % | 29.8969       % | 25.1883    % | 23.2775   % |
 
+
+The collaborative filtering prompt lags behind with a mean HR@10 of approximately 4.04%, suggesting it may not be capturing user preferences as effectively as other methods. This is largely because candidate set is not provided in this case. Without this candidate set, the collaborative filtering approach is possibly too broad or misaligned with the user's specific preferences, resulting in recommendations that the users are less likely to have watched.
+
+In contrast, the three other prompts show good performance with a candidate set provided, all exceeding the popularity-based baseline. The genre-based prompt excells with a robust 76.52% mean HR@10, underscoring the importance of genre preferences in driving user satisfaction with recommendations. Similarly, the Wikipedia-summarized prompt also performs well, with a mean HR@10 of 71.94%, indicating that incorporating content summaries from Wikipedia contributes positively to the recommendation quality. The two-step prompt achieves a mean HR@10 of 68.98%, which, while effective, suggests that additional steps in the recommendation process do not necessarily translate to a proportional increase in performance. This is further illustrated by instances where the first step failed to define user preferences clearly, giving answers like "It is difficult to summarize your preferences based on the given information". More details and context should be provided to enhance the recommendation accuracy.
+
+Interestingly, the baseline model, despite its simplicity, achieved a mean HR@10 of roughly 67.74%, reinforcing the idea that general popularity is a strong indicator of potential interest.
 
 
 ## How to Reproduce
