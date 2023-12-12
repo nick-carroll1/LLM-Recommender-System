@@ -1,5 +1,8 @@
 # LLM Recommender System
+
 This repository uses Large Language Model (LLM) to create a movie recommender system and compares the recommender's performance across four prompt templates.
+
+<img width="1000" alt="image" src="https://github.com/nick-carroll1/LLM-Recommender-System/assets/110933007/cfa47949-bade-4891-8af2-e3d109e24f26">
 
 ## Project Overview
 
