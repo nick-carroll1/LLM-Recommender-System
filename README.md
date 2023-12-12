@@ -85,17 +85,18 @@ Answer:
 
 ## Results
 
-The comparative performance for the prompts is shown in the below table:
+Our evaluation metric is the hit ratio at 10 (HR@10). This measures the proportion of the 10 movies recommended by the LLM that users have actually watched. 
 
-|      Hit Rate | Collab Prompt | Genre Prompt | Two Step Prompt | Wiki Prompt  | Baseline    |
+To enhance the robustness of our analysis, we accounted for the non-deterministic nature of LLM recommendations by running the notebook three times and recording the average result from each trial.
+
+Here are the comparative performance for the prompts:
+
+|      HR@10    | Collab Prompt | Genre Prompt | Two Step Prompt | Wiki Prompt  | Baseline    |
 | ------------- | ------------- | ------------ | --------------- | ------------ | ----------- |
 |         mean  | 2.500000    % | 82.000000  % | 72.500000     % | 76.000000  % | 65.000000 % |
 |         std   | 5.501196    % | 17.947291  % | 31.601965     % | 26.437613  % | 20.900768 % |
-|         min   | 0.000000    % | 30.000000  % | 0.000000      % | 0.000000   % | 20.000000 % |
-|         max   | 20.000000   % | 100.000000 % | 100.000000    % | 100.000000 % | 100.00000 % |
 
 
-*Note: hit rate is the proportion of recommended movies that the user watched.*
 
 ## How to Reproduce
 
