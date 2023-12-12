@@ -13,7 +13,7 @@ In this project, we use the MovieLens 100K dataset. Collected by the GroupLens R
 
 The dataset can be found here: https://grouplens.org/datasets/movielens/
 
-The original dataset was provided in MATLAB format. We converted it using the [prepare_data.ipynb] notebook and stored the processed data in ```processed_movie100k.csv``` for subsequent use. We also implemented a 70/30 train-test split to facilitate model training and evaluation. For prompt engineering, we enriched the dataset by appending a one-sentence summary from Wikipedia to each movie to provide additional context. These movie summaries, along with their corresponding titles, are compiled in ```movie_wiki.csv```.
+The original dataset was provided in MATLAB format. We converted it using the [```src/prepare_data.ipynb```](https://github.com/nick-carroll1/LLM-Recommender-System/blob/main/src/prepare_data.ipynb) notebook and stored the processed data in ```processed_movie100k.csv``` for subsequent use. We also implemented a 70/30 train-test split to facilitate model training and evaluation. For prompt engineering, we enriched the dataset by appending a one-sentence summary from Wikipedia to each movie to provide additional context. These movie summaries, along with their corresponding titles, are compiled in ```movie_wiki.csv```.
 
 ### Prompt Engineering
 
@@ -101,8 +101,8 @@ The comparative performance for the prompts is shown in the below table:
 
 1. Clone the repository: ```git clone https://github.com/nick-carroll1/LLM-Recommender-System.git```
 2. Install the libraries with right version: ```pip install -r requirements.txt```
-3. Get an Open AI API Key from the [website](https://platform.openai.com/api-keys) and include it in a python file called ```key.py```. The file only needs one line stating: ```OPENAI_API_KEY = "YOUR_KEY_HERE"```. This will allow all of the other files to import your API key.
-4. To run all four prompts and compare performance click "Run All" on the ```comparing_prompts.ipynb``` Jupyter Notebook.
+3. Get an Open AI API Key from the official [website](https://platform.openai.com/api-keys) and include it in a python file called ```key.py```. The file only needs one line stating: ```OPENAI_API_KEY = "YOUR_KEY_HERE"```. This will allow all of the other files to import your API key.
+4. To run all four prompts and compare performance click "Run All" on the [```src/comparing_prompts.ipynb```](https://github.com/nick-carroll1/LLM-Recommender-System/blob/main/src/comparing_prompts.ipynb) Jupyter Notebook.
 
 
 ## References
@@ -110,6 +110,3 @@ The comparative performance for the prompts is shown in the below table:
 [1] F. Maxwell Harper and Joseph A. Konstan. 2015. The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems (TiiS) 5, 4, Article 19 (December 2015), 19 pages. DOI=http://dx.doi.org/10.1145/2827872
 
 [2] Wang, L., & Lim, E.-P. (2023). Zero-Shot Next-Item Recommendation using Large Pretrained Language Models. arXiv [Cs.IR]. Retrieved from http://arxiv.org/abs/2304.03153
-
-
-Note: candidate sets are selected from top rated movies by similar users; similar users are selected by cosine similarity of a vector of a user's ratings; hit rate is the proportion of recommended movies that the user watched.
