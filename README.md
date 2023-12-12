@@ -77,9 +77,11 @@ Please use brackets around the movies you recommend and separate the titles by n
 Answer:
 ```
 
-All four prompts were compared against a baseline model, which recommended the top ten most popular movies from the training set to every user.
+**Candidate Set**: Since there are 1683 movies in the MovieLens 100k dataset, it's impratical to feed them all to the prompt. Therefore, we generate a candidate set of potential recommendations by identifying users with similar tastes and selecting movies that they have rated highly. Specifically, candidate sets are selected from top rated movies by similar users, who are selected by cosine similarity of a vector of a user's ratings. Based on Wang & Lim's research[2], which suggests the best number of similar users and movies to consider, we use ratings from $10$ users who are most like the person we're recommending movies to, and from these, we choose $20$ movies to recommend as our candidate set.
 
-*Note: candidate sets are selected from top rated movies by similar users; similar users are selected by cosine similarity of a vector of a user's ratings*
+**Baseline Model**: All four prompts were compared against a baseline model, which recommended the top ten most popular movies from the training set to every user.
+
+
 
 ## Results
 
